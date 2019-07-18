@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np #è la funzione per l'ottimizzazione per lscf per il metodo di LK
 from tqdm import tqdm
 
 # get_displacements
@@ -55,7 +55,7 @@ def translation(x, y, p, g):
     return spl(x + dx, y + dy)
 
 
-def roi_xy(point, roi_size):
+def roi_xy(point, roi_size): #individua la region of interest
     """
     Get grid coordinates of the selected region of interest.
     
@@ -77,7 +77,7 @@ def roi_xy(point, roi_size):
     if not H % 2:
         H += 1
 
-    x_start = point[0] - W//2
+    x_start = point[0] - W//2 
     y_start = point[1] - H//2
     x = np.arange(x_start, x_start + W)
     y = np.arange(y_start, y_start + H)
